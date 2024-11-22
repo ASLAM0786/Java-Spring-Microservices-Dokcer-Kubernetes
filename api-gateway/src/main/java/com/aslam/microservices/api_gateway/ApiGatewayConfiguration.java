@@ -9,10 +9,6 @@ import org.springframework.context.annotation.Configuration;
 public class ApiGatewayConfiguration {
     @Bean
     public RouteLocator getewayRouter(RouteLocatorBuilder builder) {
-//        Function<PredicateSpec, Buildable<Route>> routeFuction
-//                = p -> p.path("/get")
-//                .filters(f -> f.addRequestHeader("myHeader", "myURI"))
-//                .uri("http://httpbin.org:80");
         return builder.routes()
                 .route(p -> p.path("/get")
                         .filters(f -> f
